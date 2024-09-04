@@ -18,7 +18,7 @@ class ClassMethodCoversExistsRuleTest extends RuleTestCase
 
 		return new ClassMethodCoversExistsRule(
 			new CoversHelper($reflection),
-			self::getContainer()->getByType(FileTypeMapper::class)
+			self::getContainer()->getByType(FileTypeMapper::class),
 		);
 	}
 

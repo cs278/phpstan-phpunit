@@ -17,7 +17,7 @@ class ClassCoversExistsRuleTest extends RuleTestCase
 
 		return new ClassCoversExistsRule(
 			new CoversHelper($reflection),
-			$reflection
+			$reflection,
 		);
 	}
 
