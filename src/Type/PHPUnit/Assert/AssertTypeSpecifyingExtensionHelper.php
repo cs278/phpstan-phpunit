@@ -101,8 +101,7 @@ class AssertTypeSpecifyingExtensionHelper
 			$scope,
 			$expression,
 			TypeSpecifierContext::createTruthy(),
-			$bypassAlwaysTrueIssue ? new Expr\BinaryOp\BooleanAnd($expression, new Expr\Variable('nonsense')) : null,
-		);
+		)->setRootExpr($bypassAlwaysTrueIssue ? new Expr\BinaryOp\BooleanAnd($expression, new Expr\Variable('nonsense')) : $expression);
 	}
 
 	/**
