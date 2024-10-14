@@ -38,7 +38,7 @@ class Foo
 
 	public function arrayHasNumericKey(array $a, \ArrayAccess $b): void {
 		assertArrayHasKey(0, $a);
-		assertType('array&hasOffset(0)', $a);
+		assertType('non-empty-array&hasOffset(0)', $a);
 
 		assertArrayHasKey(0, $b);
 		assertType('ArrayAccess', $b);
@@ -47,7 +47,7 @@ class Foo
 	public function arrayHasStringKey(array $a, \ArrayAccess $b): void
 	{
 		assertArrayHasKey('key', $a);
-		assertType("array&hasOffset('key')", $a);
+		assertType("non-empty-array&hasOffset('key')", $a);
 
 		assertArrayHasKey('key', $b);
 		assertType("ArrayAccess", $b);
